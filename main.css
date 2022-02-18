@@ -1,0 +1,313 @@
+:root {
+    --background: rgb(255, 255, 255);
+    --header-height: 70px;
+    --header-padding: 100px;
+    --top-margin: 5px;
+    --accent: rgb(35, 110, 248);
+    --border: rgb(251, 185, 97);
+    --border-edge: rgb(0, 0, 0);
+    --solution-size: 200px;
+    --shadow: -2px 2px 10px rgba(0, 0, 0, 0.5);
+    --border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "RedHatMonoBold";
+    text-decoration: none;
+    color: black;
+}
+
+@font-face {
+    font-family: 'RedHatMonoBold';
+    src: url('fonts/RedHatMono-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background);
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+}
+
+ul {
+    width: 400px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    font-size: 20px;
+}
+
+p {
+    margin-top: 10px;
+    width: min(600px, 85%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p a, .accent {
+    color: var(--accent);
+}
+
+.section-padding {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.line-break {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-image: linear-gradient(to right, var(--border-edge) , var(--accent), var(--border-edge));
+    width: 75%;
+    height: 5px;
+}
+.header {
+    position: relative;
+    display: block;
+    width: calc(100% - calc(var(--header-padding) * 2));
+    margin-left: var(--header-padding);
+    margin-right: var(--header-padding);
+    margin-top: var(--top-margin);
+    height: var(--header-height);
+}
+
+.header img {
+    display: block;
+    object-fit: contain;
+    height: var(--header-height);
+    width: var(--header-height);
+    position:absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.header h2 {
+    width: 400px;
+    display: block;
+    text-align: center;
+    left: 0px;
+    position: absolute;
+    top: 20px;
+}
+
+.header div {
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    top: 0px;
+    height: var(--header-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-color: var(--background);
+    text-decoration-thickness: 3px;
+    transition: 0.2s;
+}
+
+a:hover {
+    text-decoration-color: var(--accent);
+}
+
+.header div a {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#mediums { 
+    display: block;;
+    width: 100%;
+    height: 250px;;
+}
+
+.cpt-resize {
+    padding-top: 100px;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 320px;
+    background-color: white;
+}
+
+.cpt-resize h1 {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: calc(50% + 150px);
+}
+
+.cpt-page {
+    margin: 5px;
+    padding: 20px;
+    position: absolute;
+    right: calc(50% - 200px);
+    display: block;
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    transform: scaleY(0.6) rotate(-20deg) ;
+    height: 300px;
+    width: 370px;
+    transition: 2s;
+}
+
+.mobile {
+    width: 120px;
+    right: calc(50% - 100px);
+}
+
+.desktop {
+    width: 370px;
+    right: calc(50% - 200px);
+}
+
+.cpt-page * {
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    background-color: black;
+}
+
+.cpt-b1 {
+    background-color: var(--accent);
+    width: calc(25% + 74px);
+    height: 50px;
+    left: 20px;
+}
+
+.cpt-b4 {
+    width: calc(30% + 67px);
+    height: 20px;
+    left: 20px;
+    top: 90px;
+}
+
+.cpt-b2 {
+    width: calc(30% - 50px);
+    top: 20px;
+    height: 40px;
+    right: 20px;
+}
+
+.cpt-b3 {
+    background-color: grey;
+    width: calc(40% + 50px);
+    height: 170px;
+    left: 20px;
+    top: 120px;
+}
+
+#top-terminal {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#top-terminal h1 {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+
+.solutions {
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+.solutions div {
+    position: relative;
+    display: block;
+    width: var(--solution-size);
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+.solutions img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.solutions div a {
+    font-size: 25px;
+    position:absolute;
+    text-align: center;
+    top: -45px;
+    height: 15px;
+    width: calc(100% - 20px);
+}
+
+.banner-logo {
+    width: 100%;
+    object-fit: contain;
+    height: 200px;
+}
+
+button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent);
+    border-width: 0px;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    cursor:pointer;
+    z-index: 10;
+    transition: 0.5s;
+}
+@media screen and (max-width: 960px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+    .header h2 {
+        display: none;
+    }
+
+    .header div a {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .header img {
+        left: calc(50% - var(--header-height) / 2);
+    }
+
+    .solutions div a {
+        font-size: 15px;
+    }
+}
