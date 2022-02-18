@@ -36,6 +36,14 @@ window.addEventListener('scroll', (() => {
         topButton.innerText = "Back to top"
     }
 }))
+if (document.documentElement.scrollTop < 100) {
+    topButton.innerText = ""
+    topButton.style = 'width: 0px; padding: 0px; height: 0px'
+} else {
+    topButton.style = ''
+    topButton.innerText = "Back to top"
+}
+
 function render() {
     if (canvas) {
         mediums.removeChild(canvas)
